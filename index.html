@@ -46,25 +46,25 @@
 </script>
 <script>
     /* Restore right–click menu everywhere */
-    (function restoreContextMenu(){
-      // 1) Gỡ các handler kiểu cũ
-      document.oncontextmenu = null;
-      window.oncontextmenu = null;
+    // (function restoreContextMenu(){
+    //   // 1) Gỡ các handler kiểu cũ
+    //   document.oncontextmenu = null;
+    //   window.oncontextmenu = null;
     
-      // 2) Gỡ các handler jQuery (nếu template đã bind chặn)
-      if (window.jQuery) {
-        try {
-          jQuery(document).off('contextmenu');
-          jQuery('*').off('contextmenu');
-        } catch(e){}
-      }
+    //   // 2) Gỡ các handler jQuery (nếu template đã bind chặn)
+    //   if (window.jQuery) {
+    //     try {
+    //       jQuery(document).off('contextmenu');
+    //       jQuery('*').off('contextmenu');
+    //     } catch(e){}
+    //   }
     
-      // 3) Chặn các handler khác cố ngăn contextmenu (ưu tiên capture)
-      window.addEventListener('contextmenu', function(e){
-        // KHÔNG preventDefault => để trình duyệt hiện menu
-        e.stopImmediatePropagation(); // vô hiệu các listener khác
-      }, true);
-    })();
+    //   // 3) Chặn các handler khác cố ngăn contextmenu (ưu tiên capture)
+    //   window.addEventListener('contextmenu', function(e){
+    //     // KHÔNG preventDefault => để trình duyệt hiện menu
+    //     e.stopImmediatePropagation(); // vô hiệu các listener khác
+    //   }, true);
+    // })();
 </script>
     
 <body>
