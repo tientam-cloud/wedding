@@ -25,6 +25,8 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&amp;display=swap' rel='stylesheet' type='text/css'>
     <link type="text/css" href="https://duongthanh-quynhmy.iwedding.info/templates/template22/css/libs.css?v=202506122" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+
     <link type="text/css" rel="stylesheet" href="/test/templates/template22/css/style.css">
     <link href="/test/common/calendar.css" rel="stylesheet">
     <link href="/test/common/toastr/toastr.min.css" rel="stylesheet">
@@ -38,7 +40,6 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K9L0ZFE1PJ"></script>
     <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-K9L0ZFE1PJ');</script>
 
-    
 </head>
 <script type="text/javascript">
     var photoGalleries = [];
@@ -46,25 +47,25 @@
 </script>
 <script>
     /* Restore right–click menu everywhere */
-    // (function restoreContextMenu(){
-    //   // 1) Gỡ các handler kiểu cũ
-    //   document.oncontextmenu = null;
-    //   window.oncontextmenu = null;
+    (function restoreContextMenu(){
+      // 1) Gỡ các handler kiểu cũ
+      document.oncontextmenu = null;
+      window.oncontextmenu = null;
     
-    //   // 2) Gỡ các handler jQuery (nếu template đã bind chặn)
-    //   if (window.jQuery) {
-    //     try {
-    //       jQuery(document).off('contextmenu');
-    //       jQuery('*').off('contextmenu');
-    //     } catch(e){}
-    //   }
+      // 2) Gỡ các handler jQuery (nếu template đã bind chặn)
+      if (window.jQuery) {
+        try {
+          jQuery(document).off('contextmenu');
+          jQuery('*').off('contextmenu');
+        } catch(e){}
+      }
     
-    //   // 3) Chặn các handler khác cố ngăn contextmenu (ưu tiên capture)
-    //   window.addEventListener('contextmenu', function(e){
-    //     // KHÔNG preventDefault => để trình duyệt hiện menu
-    //     e.stopImmediatePropagation(); // vô hiệu các listener khác
-    //   }, true);
-    // })();
+      // 3) Chặn các handler khác cố ngăn contextmenu (ưu tiên capture)
+      window.addEventListener('contextmenu', function(e){
+        // KHÔNG preventDefault => để trình duyệt hiện menu
+        e.stopImmediatePropagation(); // vô hiệu các listener khác
+      }, true);
+    })();
 </script>
     
 <body>
@@ -1619,7 +1620,6 @@ You two are made for each other — slightly crazy, totally cute! 💕`
     <script type="text/javascript" src="https://duongthanh-quynhmy.iwedding.info/templates/template22/js/script.js?v=202506122"></script>
     <script src="https://duongthanh-quynhmy.iwedding.info/common/calendar.js?v=202506122"></script>
     <script src="https://duongthanh-quynhmy.iwedding.info/common/biicommon.min.js?v=202506122"></script>
-     <!-- <script src="/common/js/common.js"></script> -->
     <script src="https://duongthanh-quynhmy.iwedding.info/common/emoji-picker/js/insertTextAtCursor.js?v=202506122"></script>
     <script type="module" src="https://duongthanh-quynhmy.iwedding.info/common/emoji-picker/js/init.js?v=202506122"></script>
     <script src="https://duongthanh-quynhmy.iwedding.info/common/toastr/toastr.min.js?v=202506122"></script>

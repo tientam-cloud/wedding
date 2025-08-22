@@ -472,11 +472,10 @@ input, textarea {
 	color: #f0394d;
 }
 .groom-color {
-	background-color: #d8e8f1;
+	background-color: #ced6db;
 }
 .bride-color {
-	/* background-color: #f0394d; */
-	background-color: #d7f0de;
+	background-color: #d8e0da;
 }
 .the-couple {
 	width: 100%;
@@ -562,9 +561,9 @@ input, textarea {
 	-ms-transition: .5s all ease-in;
 	-o-transition: .5s all ease-in;
 }
-.the-couple-img:hover .the-couple-img-hover {
+/* .the-couple-img:hover .the-couple-img-hover {
 	opacity: 1;
-}
+} */
 .the-couple-img-hover .social {
 	position: absolute;
 	top: 47%;
@@ -3120,4 +3119,42 @@ label#content-error {
 	.toast-top-right{
 		 top: 62px!important;
 	 }
+}
+
+
+ /* Ẩn các tim trang trí trong khối couple (đỡ rối mắt) */
+ .couple-name .glyphicon-heart,
+ .the-couple .glyphicon-heart { display:none !important; }
+ 
+ /* Bỏ khung oval/circle, dùng ảnh full-bleed bo góc */
+ .img-circle { border-radius: 16px !important; } /* giết hiệu ứng tròn/oval */
+ .the-couple .the-couple-img .person-image{
+   background:none; padding:0; border:0; border-radius:16px; overflow:hidden;
+   box-shadow:0 8px 24px rgba(0,0,0,.08);
  }
+ .the-couple .the-couple-img .person-image img{
+   width:100%; height:auto; object-fit:cover; border-radius:16px;
+ }
+ 
+ /* Thẻ nội dung gọn gàng, dễ đọc */
+ .the-couple{ max-width: 900px; margin:0 auto 32px; }
+ .the-couple-data{
+   margin-top:12px; background:#fff; border-radius:16px; padding:18px 20px;
+   box-shadow:0 6px 18px rgba(0,0,0,.06);
+ }
+ .the-couple-data h3{ margin:0 0 8px; font-weight:700; color:#2d3142; }
+ .the-couple .about-the-couple{ margin:0; color:#4f5d75; line-height:1.6; }
+ 
+ /* Màn lớn: ảnh trái – chữ phải (không còn cảm giác 2 cục xếp dọc) */
+ @media (min-width: 992px){
+   .couple-responsive-padding .the-couple{
+	 display:grid; grid-template-columns: 340px 1fr; gap:24px; align-items:center;
+	 text-align:left;
+   }
+   .the-couple-img, .the-couple-data, .the-couple-title{ float:none !important; }
+   .the-couple-data{ margin-top:0; }
+   .the-couple .the-couple-img .person-image img{ height:520px; }
+ }
+ 
+ /* Nhẹ nhàng nền mờ để chữ nổi hơn (tùy thích) */
+ .bg-main-image-overlay-2{ backdrop-filter: blur(2px); background-color: rgba(255,255,255,.6); }
