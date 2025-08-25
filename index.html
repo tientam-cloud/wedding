@@ -31,15 +31,14 @@
     <link href="/test/common/calendar.css" rel="stylesheet">
     <link href="/test/common/toastr/toastr.min.css" rel="stylesheet">
     
-    <!-- <link type="text/css" rel="stylesheet" href="/templates/template22/css/style.css">
+    <link type="text/css" rel="stylesheet" href="/templates/template22/css/style.css">
     <link href="/common/calendar.css" rel="stylesheet">
-    <link href="/common/toastr/toastr.min.css" rel="stylesheet"> -->
+    <link href="/common/toastr/toastr.min.css" rel="stylesheet">
 
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K9L0ZFE1PJ"></script>
     <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-K9L0ZFE1PJ');</script>
-
 </head>
 <script type="text/javascript">
     var photoGalleries = [];
@@ -1082,6 +1081,10 @@
                     <div class="blur-img bg-rsvp"
                         style="background-image: url('https://koreamarket.vn/data/tiendo/img/tam tien7919-min.jpg');">
                     </div>
+                    <div id="thankyou" class="thankyou-msg" style="display:none; color:green; margin-top:10px;">
+                        Cảm ơn bạn đã gửi lời chúc! 💌
+                    </div>
+
                     <div class="page-fixed">
                         <div class="bg-main-image-overlay-fixed ">
                             <div class="main-section-s2">
@@ -1108,14 +1111,14 @@
                                                                 id="wish-form" method="post">
                                                                 <div class="form-group">
                                                                     <input type="text" class="form-control" id="Name"
-                                                                        name="name" required data-rule-minlength="2" />
+                                                                        name="name" required  />
                                                                     <label for="Name">Nhập họ tên*</label>
                                                                 </div>
-                                                                <div class="form-group">
+                                                                <!-- <div class="form-group">
                                                                     <input type="email" class="form-control"
                                                                         id="Emailaddress" name="email" required />
                                                                     <label for="Emailaddress">Nhập Email</label>
-                                                                </div>
+                                                                </div> -->
                                                                 <div class="form-group" style="margin-bottom: 80px;">
                                                                     <div class="textarea-emoji-picker">
                                                                         <div class="vitualTextarea">
@@ -1483,7 +1486,7 @@ You two are made for each other — slightly crazy, totally cute! 💕`
                                                             });
                                                         </script>
                                                     </div>
-                                                    <div class="wish-box-item bg">
+                                                    <!-- <div class="wish-box-item bg">
                                                         <strong>CEO của Biihappy</strong>
                                                         <p class="text-left">&quot;Một cuộc hôn nhân thành công đòi hỏi
                                                             phải yêu nhiều lần, và luôn ở cùng một người&quot; - Chúc
@@ -1495,7 +1498,7 @@ You two are made for each other — slightly crazy, totally cute! 💕`
                                                                 content: `&quot;Một cuộc hôn nhân thành công đòi hỏi phải yêu nhiều lần, và luôn ở cùng một người&quot; - Chúc cho hai bạn sẽ có được một cuộc hôn nhân viên mãn, trăm năm hạnh phúc!`
                                                             });
                                                         </script>
-                                                    </div>
+                                                    </div> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -1690,19 +1693,20 @@ You two are made for each other — slightly crazy, totally cute! 💕`
             e.preventDefault();
 
             const name = $name.val().trim();
-            const email= $email.val().trim(); // hiện chưa dùng, có thể gửi kèm API sau
+            const email= ''; // hiện chưa dùng, có thể gửi kèm API sau
             const content = $msg.val().trim();
 
             if (!name || !content){
-            alert('Vui lòng nhập Họ tên và Lời chúc.');
-            return;
+                $('#Name-error').text('Vui lòng nhập Họ tên và Lời chúc.');
+                $('#Name-error').show();
+                return;
             }
 
             const wish = { name, email, content, time: Date.now() };
 
             // Hiển thị ngay
             const $item = renderItem(wish).hide();
-            $list.append($item);
+            $list.prepend($item);
             $item.slideDown(200);
 
             // Lưu localStorage để F5 không mất
@@ -1714,6 +1718,11 @@ You two are made for each other — slightly crazy, totally cute! 💕`
 
             // Reset form
             this.reset();
+
+            // Hiển thị thông báo cám ơn trong 3 giây
+            $('#thankyou').fadeIn().delay(3000).fadeOut();
+
+            $('#Name-error').hide();
         });
 
         // Render lại các lời chúc đã lưu khi F5
