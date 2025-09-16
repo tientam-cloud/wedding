@@ -73,7 +73,7 @@
 <style>
     .lqip { filter: blur(12px); transition: filter .4s ease; }
     .lqip.sharp { filter: blur(0); }
-    .bii-player-secondary-content { display: none;}
+    
 </style>
 <body>
     <!--menu bar starts from here-->
@@ -1689,6 +1689,10 @@ You two are made for each other — slightly crazy, totally cute! 💕`
     <!-- jQuery CDN (nếu trang bạn chưa có) -->
 
     <script>
+        $(document).ready(function(){
+           $('.bii-player-secondary-content').css('display', "none");
+        });
+
         $(function () {
         // ======= Cấu hình =======
         const STORAGE_KEY = 'iwedding_wishes_v1';         // key lưu localStorage
