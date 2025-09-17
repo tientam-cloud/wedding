@@ -4288,13 +4288,50 @@ label#content-error {
 	
 }
 
+
+.blur-img.bg-home {
+	background-image: url("https://koreamarket.vn/data/tiendo/img/7999/20x30 tam tien7999-1920.jpg");
+}
+
 @media (min-width: 768px) {
 	.blur-img.bg-home {
-	background-image: url("https://koreamarket.vn/data/tiendo/img/7999/20x30 tam tien7999-768.jpg");
+		background-image: url("https://koreamarket.vn/data/tiendo/img/7999/20x30 tam tien7999-768.jpg");
 	}
 }
 @media (min-width: 1200px) {
 	.blur-img.bg-home {
-	background-image: url("https://koreamarket.vn/data/tiendo/img/7999/20x30 tam tien7999-1280.jpg");
+		background-image: url('https://koreamarket.vn/data/tiendo/img/8167/20x30 tam tien7999-1920.jpg');
+	}
+}
+
+
+.blur-img.bg-couple {
+	background-image: url("https://koreamarket.vn/data/tiendo/img/8167/tam tien8167-1920.jpg");
+}
+
+@media (min-width: 768px) {
+	.blur-img.bg-couple {
+		background-image: url("https://koreamarket.vn/data/tiendo/img/8167/tam tien8167-768.jpg");
+	}
+}
+@media (min-width: 1200px) {
+	.blur-img.bg-couple {
+		background-image: url('https://koreamarket.vn/data/tiendo/img/8167/tam tien8167-1920.jpg');
+	}
+}
+
+
+.blur-img.bg-wedding {
+	background-image: url("https://koreamarket.vn/data/tiendo/img/8401/tam tien8401-1920.jpg");
+}
+
+@media (min-width: 768px) {
+	.blur-img.bg-wedding {
+		background-image: url("https://koreamarket.vn/data/tiendo/img/8401/tam tien8401-768.jpg");
+	}
+}
+@media (min-width: 1200px) {
+	.blur-img.bg-wedding {
+		background-image: url('https://koreamarket.vn/data/tiendo/img/8401/tam tien8401-1920.jpg');
 	}
 }
