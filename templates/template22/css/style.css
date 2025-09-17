@@ -4335,3 +4335,35 @@ label#content-error {
 		background-image: url('https://koreamarket.vn/data/tiendo/img/8401/tam tien8401-1920.jpg');
 	}
 }
+
+
+.blur-img.bg-gifts {
+	background-image: url("https://koreamarket.vn/data/tiendo/img/7961/tam tien7961-1920.jpg");
+}
+
+@media (min-width: 768px) {
+	.blur-img.bg-gifts {
+		background-image: url("https://koreamarket.vn/data/tiendo/img/7961/tam tien7961-768.jpg");
+	}
+}
+@media (min-width: 1200px) {
+	.blur-img.bg-gifts {
+		background-image: url('https://koreamarket.vn/data/tiendo/img/7961/tam tien7961-1920.jpg');
+	}
+}
+
+
+.blur-img.bg-rsvp {
+	background-image: url("https://koreamarket.vn/data/tiendo/img/7915/tam tien7915-1920.jpg");
+}
+
+@media (min-width: 768px) {
+	.blur-img.bg-rsvp {
+		background-image: url("https://koreamarket.vn/data/tiendo/img/7915/tam tien7915-768.jpg");
+	}
+}
+@media (min-width: 1200px) {
+	.blur-img.bg-rsvp {
+		background-image: url('https://koreamarket.vn/data/tiendo/img/7915/tam tien7915-1920.jpg');
+	}
+}
