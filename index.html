@@ -42,14 +42,12 @@
     var photoGalleries = [];
     var dataWishes = [];
 </script>
-<script>
-    /* Restore right–click menu everywhere */
+<!-- <script>
     (function restoreContextMenu(){
-      // 1) Gỡ các handler kiểu cũ
       document.oncontextmenu = null;
       window.oncontextmenu = null;
     
-      // 2) Gỡ các handler jQuery (nếu template đã bind chặn)
+      
       if (window.jQuery) {
         try {
           jQuery(document).off('contextmenu');
@@ -57,10 +55,10 @@
         } catch(e){}
       }
     
-      // 3) Chặn các handler khác cố ngăn contextmenu (ưu tiên capture)
+      
       window.addEventListener('contextmenu', function(e){
-        // KHÔNG preventDefault => để trình duyệt hiện menu
-        e.stopImmediatePropagation(); // vô hiệu các listener khác
+       
+        e.stopImmediatePropagation(); 
       }, true);
     })();
 
@@ -68,7 +66,7 @@
     const hi = new Image();
     hi.src = img.dataset.src;
     hi.onload = () => { img.src = hi.src; img.classList.add('sharp'); };
-</script>
+</script> -->
   
 <style>
     .lqip { filter: blur(12px); transition: filter .4s ease; }
@@ -469,12 +467,12 @@
                                                         "name":"TIỆC CƯỚI (Đám cưới Tiến Đỗ và Tâm Lương)",
                                                         "description":"Cảm ơn bạn đã dành thời gian tham dự đám cưới của
                                                         chúng tôi!. Thông tin chi tiết xem tại
-                                                        website:<br>[url]https://tientam-cloud.github.io/thiepcuoi/[/url]",
-                                                        "startDate":"2025-10-01",
-                                                        "endDate":"2025-10-01",
+                                                        website:<br>[url]https://tientam-cloud.github.io/wedding/[/url]",
+                                                        "startDate":"2025-10-17",
+                                                        "endDate":"2025-10-17",
                                                         "startTime":"10:00",
                                                         "endTime":"18:00",
-                                                        "location":"Hướng Dương - Thắng Lợi - Thường Tin - Hà Nội",
+                                                        "location":"Hướng Dương - Chương Dương - Hà Nội",
                                                         "options":["Apple","Google","iCal","Microsoft365","MicrosoftTeams","Outlook.com","Yahoo"],
                                                         "timeZone":"Asia/Ho_Chi_Minh",
                                                         "iCalFileName":"Reminder-Event",
@@ -515,12 +513,12 @@
                                                         "name":"TIỆC CƯỚI (Đám cưới Tiến Đỗ và Tâm Lương)",
                                                         "description":"Cảm ơn bạn đã dành thời gian tham dự đám cưới của
                                                         chúng tôi!. Thông tin chi tiết xem tại
-                                                        website:<br>[url]https://tientam-cloud.github.io/thiepcuoi[/url]",
-                                                        "startDate":"2025-10-01",
-                                                        "endDate":"2025-10-01",
+                                                        website:<br>[url]https://tientam-cloud.github.io/wedding[/url]",
+                                                        "startDate":"2025-10-17",
+                                                        "endDate":"2025-10-17",
                                                         "startTime":"10:00",
                                                         "endTime":"18:00",
-                                                        "location":"Đình làng vạn nhất, Chương Dương,Thường Tín,Hà Nội",
+                                                        "location":"Đình làng vạn nhất - Chương Dương - Hà Nội",
                                                         "options":["Apple","Google","iCal","Microsoft365","MicrosoftTeams","Outlook.com","Yahoo"],
                                                         "timeZone":"Asia/Ho_Chi_Minh",
                                                         "iCalFileName":"Reminder-Event",
